@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 在网页中显示当前时间
+    
+    // document.write(Date())           /* 方法一     */           
+            
+        var time= []    
+            var a = new Date(); 
+            var a1 = a.getFullYear();               /* 年 */
+            var a2 = a.getMonth()+1;            /* 月 */     /* 0~11整数 从0开始 0为一月 */
+            var a3 = a.getDate();                   /* 日期 */
+            var a4 = a.getDay();                    /* 天 */
+            var a5 = a.getHours();                     /* 小时 */
+            var a6 = a.getTime();                       /* 时间 */
+            var a7 = a.getUTCSeconds();                 /* 秒 */
+        time.push(a,a1+"年",a2+"月","星期"+a4,a5+"时",a7+"秒");
+            document.write(time)                             /* 方法二 */
+                // document.write(a1+"年",a2+"月")
+    
+    
+    
+</script>
+</body>
+</html>

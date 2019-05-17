@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+		.del{
+			color:red;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<ul id="a">
+    <input type="text" name="" id="">
+    <button onclick="btn">添加</button>
+       <li><span>香蕉</span> <span class="del">删除</span></li>
+       <li><span>苹果</span> <span class="del">删除</span></li>
+       <li><span>鸭梨</span> <span class="del">删除</span></li>
+       <li><span>芒果</span> <span class="del">删除</span></li>
+       <li><span>草莓</span> <span class="del">删除</span></li>
+   </ul>
+
+
+<body>
+    <script> 
+  
+    // a1.dalegata("li")
+
+
+
+
+
+
+
+
+	var aDel = document.querySelectorAll(".del");
+		for(var i = 0;i<aDel.length;i++){
+			aDel[i].onclick = function(){
+				var parent = this.parentNode
+				parent.parentNode.removeChild(parent)  
+			}
+       }    
+    </script>
+</body>
+</html>

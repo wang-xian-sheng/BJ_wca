@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>小红</h1>
+    <button>点击</button>
+    <script>
+    // 点名器
+    var res=["小红","小兰","小明","小壮","大壮","阿飞"]
+    var h1 = document.querySelector("h1");                          /* 找到h1标签赋值给h1 */
+    var btn = document.querySelector("button");                         /* 找到按钮标签复制给btn */ 
+    btn.onclick = function(){                                           /* 点击事件 */
+        var a = Math.floor(Math.random()*res.length);                          /* 新建一个变量  向下取整（随机一个0~1的数 *res的长度（6) */
+        h1.innerHTML=res[a];                                                   /* res的随机数赋值给h1 的文本 */
+        a++;   
+    }   
+    
+    
+    
+    </script>
+</body>
+</html>

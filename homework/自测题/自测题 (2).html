@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!-- 编写一个函数，实现两个数字的四则运算，第一个参数m是第一个数字，第二个参数o是操作符，第三个数n是第二个数字 -->
+        <script>
+        function count(m,s,n){
+            switch (s){
+                case "+" : return m+n ;break;
+                case "-" : return m-n ;break;
+                case "*" : return m*n ;break;
+                case "/" : return m/n ;break;
+            }
+
+        }
+        var result = count(5,"+",6);
+        console.log(result);  //输出11
+        var result = count(5,"*",6);
+        console.log(result);  //输出30
+        </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 使用冒泡排序升序排列此数组[5,50,6,11,18,62,31,52,19] -->
+    <script>
+    var res = [5,50,6,11,18,62,31,52,19];
+    for(var i=0;i<res.length;i++){
+        for(var o=0;o<res.length;o++){
+            if(res[o]>res[i]){
+                var res_1= res[i];
+                res[i] = res[o]
+                res[o]=res_1;
+            }
+        }
+    }
+    console.log(res);
+    </script>
+</body>
+</html>

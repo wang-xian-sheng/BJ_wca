@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a">
+        <h1>{{massage}}</h1>
+        <input type="button" value="跑" @click="pao">
+        <input type="button" value="停" @click="ting">
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el:"#a",
+            data:{
+                massage:'猥琐发育，别浪！！！',
+                intervalId: null 
+            },
+           methods : {
+                pao () {
+                    if(this.intervalId != null)return;
+                   this.intervalId = setInterval( () => {
+                    var a1 = this.massage.substring (0,3)           /* 截取前三个字符串  */
+                    var a2 = this.massage.substring (3)                 /* 截取后三个所有字符串 */
+                    this.massage = a2 +a1
+                   console.log(a1)
+                   },300)
+                } ,
+                ting () {
+                  clearInterval(this.intervalId);
+                  this.intervalId = null;
+                }
+            },
+        })
+
+
+    </script>
+</body>
+</html>

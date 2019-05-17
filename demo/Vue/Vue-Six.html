@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h4>{{massage}}</h4>
+        <input type="button" value="开始" @click="go">
+        <input type="button" value="停" @click="stop">
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    new Vue({
+        el:"#app",
+        data:{
+            massage:"",
+            null:null,
+        },
+        methods:{
+            go () {
+            var str=["王春鑫","王崇昂","马圣秦","王浩","廖峰","王博辉","丁凯","张海","郑浩然","张润泽","年佳如",];
+            clearInterval(this.null);
+            this.null=setInterval( () => {
+              var floor=Math.floor(Math.random()*str.length); 
+              var s=str[floor];
+              this.massage=s;
+            },1000)
+        },
+            stop(){
+                clearInterval(this.null);
+                this.null=null;
+                // var a1= this.massage;
+               var a1=prompt(this.massage);
+                if(a1== "好的"){
+                    alert("请坐!")
+                }else{
+                    alert("站起来！")
+                }
+            }
+        }
+    })
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

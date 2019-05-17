@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{time}}
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    new Vue({
+        el:"#app",
+        data:{
+            time : ''
+        },
+        mounted(){
+            setInterval ( () => {
+            var timeAgo_1 = new Date("2019-6-6 00:00:00");
+            var timeAgo_2 = timeAgo_1.getTime();
+            var time_1 = new Date();
+            var time_2 = time_1.getTime();
+            var _time = timeAgo_2 - time_2;
+            var tian =Math.floor( _time/1000/60/60/24);
+            var shi = Math.floor(_time/1000/60/60%24);
+            var fen = Math.floor(_time/1000/60%60);
+            var miao = Math.floor(_time/1000%60);
+            var datatime = tian + "天"+shi+"时"+fen+"分钟"+miao+"秒";
+            this.time = datatime
+            },1000)
+        }
+    })
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+        <div id="app">
+    <button v-on:click="a(1)">+</button>
+    <p>{{mass}}</p>
+    <button v-on:click="b(1)">-</button>
+        </div>
+    <script src="vue.js"></script>
+ 
+    <script>
+        new Vue({                             //新建一个Vue 
+            el:"#app",                        //    el为选择器
+            data:{  
+                 mass:2,
+            },
+            methods:{               //传递参数  数据
+                // a:function(num){            //函数a的实参
+                //     if(num!=""){            //如果数字不等于空值
+                //         this.mass+=num;     //这个称mass的命名+实参赋值给mass   
+                //     } 
+                // },                          //在Vue里需要用逗号","隔开
+                //  b:function(num){           //同上
+                //     if(num!=""){
+                //         this.mass-=num;
+                //     }
+                // }
+                a(){
+                    this.mass=this.mass+1;
+                },
+                b(){
+                    this.mass=this.mass-1;
+                },
+                
+            }
+ 
+        })
+        
+    
+    </script>
+    
+</body>
+</html>

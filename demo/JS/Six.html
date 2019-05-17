@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 6.去掉数组中的重复元素[5,10,6,11,18,22,11,31,6,52,19]
+       
+
+
+    
+    var arr=[5,10,6,11,18,22,11,31,6,52,19];
+    var str=[]
+    var arr1=[];
+    for(var i=0;i<arr.length;i++){                      /* 循环语句  */
+        if(!str[arr[i]]){                                   /* 如果不包含arr的值 */
+            str[arr[i]]= " 没重复的值";                    /* 没重复的值 赋值给对象中 */             
+            arr1.push(arr[i]);                              /* 添加末尾 */
+        }
+    }   
+    console.log(arr1)
+    </script>
+</body>
+</html>

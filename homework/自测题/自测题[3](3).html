@@ -1,0 +1,42 @@
+<!DOCTYPE html>    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!-- 实现一个图片切换效果（效果与之前的图片效果相同） -->
+    <div id="app">
+        <img     v-bind:src="img"> 
+        <button @click="btn1">图片1</button>
+        <button @click="btn2">图片2</button>
+        <button @click="btn3">图片3</button>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    
+    new Vue({
+        el:"#app",
+        data:{
+            img : "1.jpg"
+        },
+        methods:{
+            btn1 (){
+               this.img ="1.jpg"
+            },
+            btn2 (){
+               this.img  ="2.jpg"
+            },
+            btn3 (){
+               this.img ="3.jpg" 
+            },
+        }
+    })
+
+
+    
+    </script>
+</body>
+</html>

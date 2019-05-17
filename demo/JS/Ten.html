@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 使用冒泡排序升序排列此数组[5,50,6,11,18,62,31,52,19]
+
+     var res=[19,50,6,11,18,62,31,52,5];
+
+        // 循环控制比较的轮数
+    for(var i=0;i<res.length-1;i++){
+        // 控制每一轮比较的次数
+        for(var j=0;j<res.length-1-i;j++){                             /*  轮数比较次数越来越少，比较的次数也越来越少; */
+            if(res[j]>res[j+1]){                                                            /*  当j等于0时，应该去和j比较 */
+                var temp=res[j];                                /* 把res[j]赋值给temp   temp(j) */
+                res[j]=res[j+1];                               /*  把j+1赋值给j         j(j+1) */
+                res[j+1]=temp ;                                 /* 吧temp赋值给j+1      j+1(temp)    */    
+            }                                                
+        }                                   
+    }
+    console.log(res)
+    </script>
+</body>
+</html>

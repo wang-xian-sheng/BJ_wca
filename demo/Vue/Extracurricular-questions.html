@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1 -->
+    <!-- <div id="awee">
+        {{mass}}
+    </div> -->
+
+    <!-- 2 -->
+    <div id="app">
+        <span v-bind:title="massage">
+            悬停几秒查看信息！
+        </span> 
+    </div>
+    <!-- 3 -->
+
+
+
+ <!-- <div id="app-1">
+        <p v-if="seen">现在你看到我了</p>
+    </div> -->
+
+
+<!-- <div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div> -->
+
+    <script src=" vue.js"></script>
+    <script>
+
+// var app4 = new Vue({
+//   el: '#app-4',
+//   data: {
+//     todos: [
+//       { text: '学习 JavaScript' },
+//       { text: '学习 Vue' },
+//       { text: '整个牛项目' }
+      
+//     ]
+//   }
+// })
+// app4.todos.push({ text: '新项目' })
+
+
+
+
+        // 1
+
+        //  new Vue({
+        //     el:"#awee",
+        //     data:{
+        //         mass    : "哦"
+        //     }
+        // })
+        //Vue基础
+
+        // 2
+
+        new Vue({
+            el:'#app',
+            data:{
+                massage:'页面加载于' + new Date().toLocaleDateString(), //绑定属性内容：页面加载于最新时间   massage为属性绑定
+        //         //toLocaleDateString() 方法可根据本地时间把 Date 对象的日期部分转换为字符串，并返回结果。
+            }
+        })
+
+        // 3
+
+        // new Vue({
+        //     el:"#app-1",
+        //     data:{
+        //         seen:true,f
+        //     }
+        // })
+        // 继续在控制台输入 app3.seen = false，你会发现之前显示的消息消失了。
+        // 这个例子演示了我们不仅可以把数据绑定到 DOM 文本或特性，还可以绑定到 DOM 结构。
+        // 此外，Vue 也提供一个强大的过渡效果系统，可以在 Vue 插入/更新/移除元素时自动应用过渡效果。
+        // 还有其它很多指令，每个都有特殊的功能。例如，v-for 指令可以绑定数组的数据来渲染一个项目列表：
+    </script>
+</body>
+</html>

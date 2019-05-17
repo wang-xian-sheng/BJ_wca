@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!-- 编写一个函数，随机获取1-7七个数字的任意一个。 -->
+        <p></p>
+    <button>按钮</button>
+    <script>
+        
+        var p = document.querySelector('p').innerHTML;
+        // console.log(p)
+        var btn = document.querySelector('button');
+        btn.onclick=function a(){
+        var res=Math.floor(Math.random()*(7));
+        p=p+res;
+
+
+        document.write(p)
+        }
+        
+
+    </script>
+</body>
+</html>

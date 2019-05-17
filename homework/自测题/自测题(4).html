@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!-- 图片切换效果:点击数字列表的时候，上面的图片切换成不同的图片 -->
+        <img src="1.jpg" alt="图片错误">
+        <button class="btn1">图片一</button>
+        <button class="btn2">图片二</button>
+        <button class="btn3">图片三</button>
+        <script>
+        var img = document.querySelector("img");
+            var btn1 = document.querySelector(".btn1");
+        btn1.onclick =function  () {
+            img.src="2.jpg"
+        } ;
+        var btn2 = document.querySelector(".btn2");
+        btn2.onclick =function  () {
+            img.src="1.jpg"
+        };
+        var btn3 = document.querySelector(".btn3");
+         btn3.onclick =function  () {
+            img.src="3.jpg"
+            // 无图片
+        }
+        
+        </script>
+</body>
+</html>

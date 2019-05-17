@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+    // 在网页中实现一个倒计时功能，显示距离目标时间（2019年6月6日）还有天，多少小时，多少分钟，多少秒
+
+
+        setInterval(function(){
+            
+        
+        
+        
+
+
+    var h1 = document.querySelector("h1");
+    var res = 0;
+    var a = new Date("2019-6-6 0:0:0");
+    var w =a.getTime();
+    var c = new Date();
+    var c1 = c.getTime(); 
+    res = w-c1;
+    var tian = res/1000/60/60/24;              /*  计算    一秒等于1000毫秒  一分等于60秒  一小时等于60分  一天24小时*/
+    var shi = res/1000/60/60%24;                            /*    一秒等于1000毫秒  一分等于60秒   一小时等于60分 距离**时间小时的余数      */
+    var fen = res/1000/60%60;                   /* 秒等于1000毫秒  一分等于60秒   距离**时间分钟的余数   */
+    var miao = res/1000%60;                      /* 秒等于1000毫秒   距离**时间秒的余数   */
+
+
+
+    h1.innerHTML= Math.floor(tian)+"天"+Math.floor(shi)+"时"+Math.floor(fen)+"分"+Math.floor(miao)  +"秒";
+    
+
+})
+ 
+
+
+
+
+    </script>
+</body>
+</html>

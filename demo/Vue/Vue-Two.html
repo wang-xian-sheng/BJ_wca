@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="app">
+                <form v-on:submit.prevent="d">
+
+                    <input v-model="newFruit" type="text">
+                    <input type="button" value="添加" v-on:click="btn" >
+                </form>
+                <ul>
+                    <li v-for="(val,index) in fruits">
+                        {{val}}
+                        <span v-on:click="del(index)">删除</span>
+                    </li>
+                </ul>
+            </div>
+            <script src="vue.js"></script>
+            <script>
+                new Vue({
+                    el:"#app",
+                    data:{
+                        fruits:["香蕉","苹果","鸭梨"]
+                    },
+                    methods:{
+                        del:function(index){  
+                            this.fruits.splice(index,1);
+                        },
+                        btn:function(){
+                            this.fruits.push(this.newFruit);
+                        }	
+                    }
+                })
+            </script>
+</body>
+</html>

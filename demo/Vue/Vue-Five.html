@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="app">
+            {{value}}
+        </div>   
+<script src="vue.js"></script>
+<script>
+            new Vue({
+            el: '#app',
+            data:{
+                value: ""
+            },
+            mounted(){
+               setInterval( ()  => {
+                var a = new Date("2019-6-6 0:0:0");
+                var q = a.getTime();
+                var w = new Date();
+                var e = w.getTime();
+                var p = q - e;
+                var tian = p/1000/60/60/24;  
+                var shi = p/1000/60/60%24;
+                var fen =p/1000/60%60;
+                var miao = p/1000%60;
+               var a1=Math.floor(tian)+"天"+Math.floor(shi)+"时"+Math.floor(fen)+"分"+Math.floor(miao)+"秒";
+               this.value = a1 ;
+               })
+            }
+         })
+         
+</script>
+</body>
+</html>

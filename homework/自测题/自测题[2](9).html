@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <button>点名</button>
+    <!-- 学员随机点名 -->
+    <script>
+    var p = document.querySelector("p")
+    var btn =document.querySelector("button")
+    btn.onclick=function(){
+        var list = ["马圣秦","王崇昂","王春鑫","贾海港","王芷峰"]; 
+        var a = Math.floor(Math.random()*list.length);
+        p.innerHTML=list[a]
+
+    }
+
+    
+    
+    </script>
+</body>
+</html>

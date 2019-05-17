@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{student}}</p>
+        <button @click="go">点名</button>
+        <button @click="stop">停</button>
+    </div>
+ 
+    <script src="vue.js"></script>
+    <script>
+    new Vue({
+        el:"#app",
+        data:{
+        student:"",
+        _null : null
+        },
+        methods:{
+            go () {
+                var str = ["王春鑫","马圣秦","王崇昂","贾海港","王芷峰","王浩","丁凯","张海","张润泽","廖峰"]
+                clearInterval(this._null);
+                this._null = setInterval (() => {
+                 var a =Math.floor(Math.random()*str.length);
+                this.student = str[a]
+                } ,1000)
+                
+            },
+            stop(){
+                clearInterval(this._null);
+                this._null=null;
+            }
+        }
+
+
+
+    })
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">          
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!-- 实现一个表单邮箱验证功能，此表单如果填写错误的邮箱格式会有提示。 -->
+        <input type="text" id="list">
+        <input type="button" value="验证" id="btn">
+        <script>
+        
+        var list = document.querySelector('#list');
+        var btn = document.querySelector('#btn');
+        var num = /^[0-9,A-Z,a-z\_]{5,12}\@[0-9 A-Z a-z]{2,5}\.com$/   /* 5,12  只能输入5~12位数 */
+       btn.onclick=function(){
+        if(num.test(list.value)){/* /^[0-9]{1,8}$/ */
+            alert("提交成功")
+        }else{
+            alert("gun")
+        }
+       }
+            
+
+        //    console.log(m)
+        </script>
+
+    </body>
+</html>
